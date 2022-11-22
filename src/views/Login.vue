@@ -73,8 +73,8 @@ export default {
       router.push({ path: "/clogin", query: { phone:loginDetail.phone } });
     };
     const loginDetail = reactive({
-      phone: "15021404748",
-      password: "qq13524670097",
+      phone: "",
+      password: "",
     });
     onMounted(() => {
       //let res=getCaptcha(15021404748)
