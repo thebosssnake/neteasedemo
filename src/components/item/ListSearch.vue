@@ -51,13 +51,13 @@
       let store=useStore();
       let searchKey = reactive({ searchList:{},Key: "", });
       const enterKey = async () => {
-        
+        console.log(props.itemlist);
         searchKey.searchList=props.itemlist.filter((value) => {
             return value.name.indexOf(searchKey.Key) !== -1;
           });
         console.log(searchKey.searchList);
       };
-      //console.log(props.itemlist);
+      
       onMounted(() => {
       });
       const upadateIndex=(item)=>{

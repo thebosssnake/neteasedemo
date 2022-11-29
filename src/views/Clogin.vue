@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { reactive } from "vue";
+import { onMounted, reactive } from "vue";
 import { getCaptchaCom ,getLoginUser} from "@/requst/api/home";
 import { useRouter, useRoute } from "vue-router";
 import { useStore } from "vuex";

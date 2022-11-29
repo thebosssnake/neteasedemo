@@ -67,7 +67,7 @@
 </template>
 <script>
 import ListSearch from "@/components/item/ListSearch.vue";
-import { onMounted, reactive } from "vue";
+import { onMounted, onUpdated, reactive } from "vue";
 import { useStore } from "vuex";
 export default {
   components:{
@@ -79,10 +79,13 @@ export default {
       searchShow:false,
       itemlist:{}
     });
-    
+    onUpdated(()=>{
+      Show.itemlist=props.itemList 
+      //console.log(Show.itemlist);
+    })
     //console.log(props);
-    Show.itemlist=props.itemList
-    //console.log(store.state.searchShow);
+    
+   
     return {
       Show,props,store
     };

@@ -67,6 +67,9 @@ export default {
         alert("手机号码或者密码错误");
       }
     };
+    const test=()=>{
+      console.log("成功");
+    }
     const sentCaptcha = () => {
       let res=getCaptcha(loginDetail.phone)
       console.log(res);
@@ -85,7 +88,7 @@ export default {
       ChangeLogin,
       isShow,
       router,
-      Login,
+      Login,test,
       loginDetail,
     };
   },
